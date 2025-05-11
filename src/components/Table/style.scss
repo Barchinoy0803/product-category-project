@@ -1,0 +1,18 @@
+.buttons__wrapper{
+    display: flex;
+    gap: 20px;
+
+    .delete__button{
+        color: rgba(218, 15, 15, 0.87);
+    }
+
+    .edit__button{
+        color: rgb(221, 155, 12);
+    }
+
+    button{
+        border: none;
+        background: transparent;
+        font-size: 30px;
+    }
+}

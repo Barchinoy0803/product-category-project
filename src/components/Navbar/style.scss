@@ -1,0 +1,25 @@
+.navbar{
+    background: #9e9ee9;
+
+    .navbar__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 16px;
+
+        h2{
+            color: rgb(252, 251, 251);
+        }
+
+        .dashboard{
+            padding-block: 16px;
+            padding-inline: 48px;
+            border-radius: 45px;
+            background: #7c7cc2;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}

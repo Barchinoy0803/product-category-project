@@ -1,0 +1,19 @@
+.alert-dialog-title{
+    font-size: 90px;
+}
+
+.dialog__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input, select{
+        padding: 16px 14px;
+        width: 400px;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+
+}
