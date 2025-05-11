@@ -17,7 +17,7 @@ import usePatch from "../../hooks/usePatch";
 export default function ProductsDialog({
   productsDialog: { isOpen, type, id },
   setProductsDialog,
-  setReload 
+  setReload, reload
 }) {
 
   const [nameValue, setNameValue] = useState("");
@@ -26,7 +26,8 @@ export default function ProductsDialog({
   const [imageValue, setImageValue] = useState("");
   const [categoryValue, setCategoryValue] = useState("");
 
-  const { data: categories } = useGet("/categories");
+  const { data: categories } = useGet("/categories", reload);
+
   const { data: product } = useGet(`/products/${id}`, false, id === undefined)
 
   const { post } = usePost();
@@ -72,7 +73,7 @@ export default function ProductsDialog({
     if (type === "edit") {
       await patchData(`products/${id}`, products)
     }
-    
+
     setReload((p) => !p)
     handleClose();
   };
@@ -112,7 +113,7 @@ export default function ProductsDialog({
                 onChange={(e) => setDescriptionValue(e.target.value)}
                 type="text"
                 placeholder="Description..."
-              /> 
+              />
               <input
                 value={imageValue}
                 onChange={(e) => setImageValue(e.target.value)}

@@ -17,7 +17,7 @@ const DashboardLayout = () => {
             <div className='outlet__wrapper'>
                 <DashboardNavbar setProductsDialog={setProductsDialog} setCategoryDialog={setCategoryDialog}/>
                 <Outlet context={{ reload, setReload, setProductsDialog, setCategoryDialog }} />
-                <ProductsDialog setReload={setReload} productsDialog={productsDialog} setProductsDialog={setProductsDialog} />
+                <ProductsDialog setReload={setReload} reload={reload} productsDialog={productsDialog} setProductsDialog={setProductsDialog} />
                 <CategoryDialog setReload={setReload} categoryDialog={categoryDialog} setCategoryDialog={setCategoryDialog}/>
             </div>
         </div>
